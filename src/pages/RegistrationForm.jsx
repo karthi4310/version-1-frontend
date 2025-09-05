@@ -77,7 +77,7 @@ const RegistrationForm = () => {
     // First check if backend is accessible
     try {
       console.log('Checking backend connectivity...');
-      await fetch('http://localhost:8080/api/auth/test', { 
+      await fetch('http://ec2-13-48-25-176.eu-north-1.compute.amazonaws.com:8080/api/auth/test', { 
         method: 'GET',
         timeout: 5000 
       });

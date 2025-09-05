@@ -227,7 +227,7 @@ npm start
 ### 5. Test Backend
 ```bash
 # Test the API
-curl http://localhost:8080/api/auth/countries
+curl http://ec2-13-48-25-176.eu-north-1.compute.amazonaws.com:8080/api/auth/countries
 ```
 
 ## Frontend Configuration
@@ -235,14 +235,14 @@ curl http://localhost:8080/api/auth/countries
 ### 1. Update Environment Variables
 Create a `.env` file in the frontend root:
 ```env
-REACT_APP_API_URL=http://localhost:8080/api
+REACT_APP_API_URL=http://ec2-13-48-25-176.eu-north-1.compute.amazonaws.com:8080/api
 ```
 
 ### 2. Update API Base URL
 The API service is already configured to use the environment variable:
 ```javascript
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8080/api',
+  baseURL: process.env.REACT_APP_API_URL || 'http://ec2-13-48-25-176.eu-north-1.compute.amazonaws.com:8080/api',
   timeout: 10000,
   headers: {
     'Content-Type': 'application/json',
